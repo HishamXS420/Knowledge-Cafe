@@ -3,6 +3,7 @@ import "./App.css";
 import Blogs from "./Components/Blogs/Blogs";
 import Header from "./Components/header/header";
 import { useEffect } from "react";
+import Bookmarks from "./Components/Bookmarks/Bookmarks";
 
 function App() {
   const [blogs, setBlogs] = useState([]);
@@ -16,7 +17,11 @@ function App() {
   return (
     <>
     <Header></Header>
-    <Blogs></Blogs>
+      <div className="md: flex">
+        <Blogs></Blogs>
+        <Bookmarks></Bookmarks>
+       </div>
+   
     </>
   );
 }
